@@ -1,0 +1,73 @@
+<ion-content fullscreen="true">
+
+  <div class="custom-header">
+    <h1>Password Generator</h1>
+  </div>
+
+  <div class="content-wrapper">
+
+    <div class="main-card">
+
+      <div class="inner-section">
+        <h4>Tentang</h4>
+        <p>
+          Aplikasi untuk membuat kata sandi dengan berbagai opsi kustomisasi.
+        </p>
+      </div>
+
+      <div class="inner-section">
+        <h4>Fitur</h4>
+        <ul>
+          <li>Generate password acak</li>
+          <li>Atur panjang password</li>
+          <li>Huruf, angka, simbol</li>
+          <li>Simpan & lihat riwayat password</li>
+        </ul>
+      </div>
+
+      <div class="inner-section">
+        <h4>Cara Pakai</h4>
+        <p>
+          1. Atur panjang dan karakter<br>
+          2. Klik “Hasilkan Baru”<br>
+          3. Salin atau simpan password
+        </p>
+      </div>
+
+      <div class="inner-section">
+        <h4>Developer</h4>
+        <p>
+          Dibuat oleh: Rian<br>
+        </p>
+      </div>
+
+      <div class="inner-section">
+        <h4>Informasi Data</h4>
+        <p>
+          Semua data disimpan secara lokal menggunakan Ionic Storage dan tidak dikirim ke server.
+        </p>
+      </div>
+
+      <ion-button expand="block" class="btn" (click)="downloadSavedPDF()">
+        <span>
+          Download Password Tersimpan
+        </span>
+        <span class="pdf">
+          (<ion-icon name="document-outline"></ion-icon> PDF)
+        </span>
+      </ion-button>
+
+      <ion-button expand="block" class="btn" (click)="downloadHistoryPDF()">
+        <span>
+          Download Data Riwayat
+        </span> 
+        <span class="pdf">
+          (<ion-icon name="document-outline"></ion-icon>PDF)
+        </span>
+      </ion-button>
+
+    </div>
+
+  </div>
+
+</ion-content>

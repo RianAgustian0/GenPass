@@ -1,0 +1,148 @@
+ion-content {
+  --background: linear-gradient(180deg, #F8F1E1, #ddc0a9);
+  overflow: hidden;  
+}
+
+ion-button ion-icon {
+  color: #705937 !important;
+}
+
+ion-button:active ion-icon {
+  filter: brightness(0.8);
+}
+
+ion-toggle {
+  --handle-background-checked: #fff;
+  --background-checked: #D4A76A;
+}
+
+ion-range {
+  --bar-background-active: #D4A76A;
+  --knob-background: #D4A76A;
+}
+
+
+.custom-header {
+
+  position: sticky;
+  top:0;
+  z-index: 10;
+  background: #3E2F23;
+  color: #fff;
+
+  min-height: 70px;
+  padding-top: 13px; 
+  padding-bottom: 3px;
+
+  display: flex;
+  justify-content: center; 
+  align-items: center;    
+
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.content-wrapper {
+  padding: 18px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 0px 16px; 
+  margin-bottom: 10px;
+  border: 2px solid #D4A76A;
+}
+
+.card-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.password {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 2; 
+  margin-bottom: 2px;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.card-content > div:first-child {
+  flex: 1;
+  min-width: 0;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.section-header ion-button {
+  margin-left: auto;
+}
+
+.time {
+  font-size: 11px;
+  color: #888;
+  line-height: 1;
+}
+
+ion-button {
+  height: 28px;
+  width: 28px;
+  --padding-start: 0;
+  --padding-end: 0;
+}
+
+.section .list{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background: #fff;
+  border-radius: 14px;
+  padding: 10px;
+  margin-bottom: 20px;
+
+  border: 2px solid #b3905f;
+}
+
+.section h2 {
+  margin-bottom: 10px;
+  font-size: 16px;
+  margin-top: 0;
+  line-height: 1;
+}
+
+.section.scrollable {
+  background: #fff;
+  border-radius: 16px;
+  padding: 13px;
+  margin-bottom: 16px;
+  border: 3px solid #826742;
+
+  height: 240px;
+  display: flex;
+  flex-direction: column;
+}
+
+.section.scrollable .list {
+  overflow-y: auto;
+  flex: 1;
+}
+
+.section.scrollable .list::-webkit-scrollbar {
+  width: 4px;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.section.scrollable .list::-webkit-scrollbar-thumb {
+  background: rgba(212,167,106,0.5);
+  border-radius: 10px;
+}

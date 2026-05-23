@@ -1,0 +1,79 @@
+ion-content {
+  --background: linear-gradient(180deg, #F8F1E1, #ddc0a9);
+  overflow: hidden;  
+}
+
+.custom-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: #3E2F23;
+  color: #fff;
+
+  min-height: 70px;
+  padding-top: 13px; 
+  padding-bottom: 3px;
+
+  display: flex;
+  justify-content: center; 
+  align-items: center;     
+
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.content-wrapper {
+  padding: 18px;
+}
+
+.main-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 16px;
+  border: 3px solid #917349;
+}
+
+.inner-section {
+  margin-bottom: 14px;
+}
+
+.inner-section:not(:last-child) {
+  border-bottom: 2px solid rgba(212,167,106,0.3);
+  padding-bottom: 10px;
+}
+
+.inner-section h4 {
+  margin: 0 0 6px;
+}
+
+.inner-section ul {
+  padding-left: 18px;
+  margin: 0;
+}
+
+.inner-section p {
+  margin: 0;
+  line-height: 1.4;
+}
+
+.main-card ion-button {
+  margin-top: 10px;
+}
+
+.btn {
+  margin-bottom: 10px;
+  --background: linear-gradient(180deg, #D4A76A, #9e7b4e);
+
+  --border-radius: 12px;
+  --border-width: 2px;
+  --border-style: solid;
+  --border-color: #3E2F23;
+
+  flex-direction: column;
+}
+
+.pdf {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}

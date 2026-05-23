@@ -1,0 +1,56 @@
+<ion-content fullscreen="true">
+
+  <div class="custom-header">
+    <h1>Password Generator</h1>
+  </div>
+
+  <div class="content-wrapper">
+
+    <div class="section scrollable">
+      <h2>Password Tersimpan</h2>
+      <div class="list">
+
+        <div class="card" *ngFor="let item of saved; let i = index">
+          <div class="card-content">
+
+            <div>
+              <div class="password">{{ item.value }}</div>
+              <div class="time">{{ item.time }}</div>
+            </div>
+
+            <div class="actions">
+              <ion-button fill="clear" (click)="copy(item.value)">
+                <ion-icon name="copy-outline"></ion-icon>
+              </ion-button>
+
+              <ion-button fill="clear" (click)="deleteSaved(i)">
+                <ion-icon name="trash-outline"></ion-icon>
+              </ion-button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section scrollable">
+      <h2>Riwayat</h2> 
+
+      <div class="list">
+        <div class="card" *ngFor="let item of history">
+          <div class="card-content">
+            <div>
+              <div class="password">{{ item.value }}</div>
+              <div class="time">{{ item.time }}</div>
+            </div>
+
+            <ion-button fill="clear" (click)="copy(item.value)">
+              <ion-icon name="copy-outline"></ion-icon>
+            </ion-button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</ion-content>

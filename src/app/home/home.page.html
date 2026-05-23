@@ -1,0 +1,73 @@
+<ion-content fullscreen="true">
+
+  <div class="custom-header">
+    <h1>Password Generator</h1>
+  </div>
+
+  <div class="content-wrapper">
+
+    <div class="section">
+      <div class="password-box">
+        <ion-text class="password-text"
+          [style.fontSize]="fontSize"
+          [class.placeholder]="!generatedPassword">
+          {{ generatedPassword || 'Belum ada password'}}
+        </ion-text>
+
+        <div class="actions">
+          <ion-button (click)="copyPassword()" fill="clear">
+            <ion-icon name="copy-outline"></ion-icon>
+          </ion-button>
+          <ion-button (click)="clearPassword()" fill="clear">
+            <ion-icon name="trash-outline"></ion-icon>
+          </ion-button>
+        </div>
+      </div>
+
+      <ion-button expand="block" class="generate-btn" (click)="generatePassword()">
+        HASILKAN BARU
+      </ion-button>
+
+      <ion-button expand="block" class="save-btn" (click)="savePassword()">
+        SIMPAN PASSWORD
+      </ion-button>
+    </div>
+
+    <div class="section">
+      <h2>Pengaturan</h2>
+
+      <ion-item class="custom-item">
+        <ion-label position="stacked">Awalan (opsional)</ion-label>
+        <ion-input [(ngModel)]="prefix" placeholder="contoh: user"></ion-input>
+      </ion-item>
+
+      <ion-item class="custom-item">
+        <ion-label>Panjang ({{ length }})</ion-label>
+        <ion-range min="6" max="32" [(ngModel)]="length"></ion-range>
+      </ion-item>
+
+      <ion-item class="custom-item">
+        <ion-label>Huruf Besar</ion-label>
+        <ion-toggle slot="end" [(ngModel)]="useUppercase"></ion-toggle>
+      </ion-item>
+
+      <ion-item class="custom-item">
+        <ion-label>Huruf Kecil</ion-label>
+        <ion-toggle slot="end" [(ngModel)]="useLowercase"></ion-toggle>
+      </ion-item>
+
+      <ion-item class="custom-item">
+        <ion-label>Angka</ion-label>
+        <ion-toggle slot="end" [(ngModel)]="useNumbers"></ion-toggle>
+      </ion-item>
+
+      <ion-item class="custom-item">
+        <ion-label>Simbol</ion-label>
+        <ion-toggle slot="end" [(ngModel)]="useSymbols"></ion-toggle>
+      </ion-item>
+
+    </div>
+
+  </div>
+
+</ion-content>
